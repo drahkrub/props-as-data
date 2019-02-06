@@ -1,5 +1,7 @@
 # props-as-data
 
+A simple example for dynamic forms (arbitrary complex) with vue, but with objects passed by props as initial data (bad practice?).
+
 ## Project setup
 ```
 npm install
