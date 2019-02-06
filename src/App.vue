@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li><node :value="node" no-remove/></li>
+      <li><node :node="node" no-remove/></li>
     </ul>
   </div>
 </template>

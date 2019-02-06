@@ -5,7 +5,7 @@
     <button v-if="!noRemove" @click="$emit('remove')">delete</button>
     <ul v-if="node.children">
       <li v-for="(child, index) in node.children" :key="index">
-        <node :value="child" @remove="remove(index)"></node>
+        <node :node="child" @remove="remove(index)"></node>
       </li>
     </ul>
   </div>
@@ -15,17 +15,12 @@
 export default {
   name: "node",
   props: {
-    value: {
+    node: {
       type: Object,
       required: true
     },
     noRemove: {
       type: Boolean
-    }
-  },
-  data() {
-    return {
-      node: this.value
     }
   },
   methods: {
